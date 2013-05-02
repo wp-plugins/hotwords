@@ -43,7 +43,7 @@ You should have received a copy of the GNU General Public License along with Pub
 == Frequently Asked Questions ==
 
 = Posso sugerir idéias ou modificações para este plugin? =
-Claro que pode, deixe seu comentário no link [Hotwords](http://profissionais.ws/plugin-wordpress-hotwords#comments)
+Claro que pode, deixe seu comentário no link [Hotwords](http://fazer-site.net/plugin-wordpress-hotwords/#comments)
 
 == Screenshots ==
 1. Página de opções do Plugin
@@ -52,3 +52,6 @@ Claro que pode, deixe seu comentário no link [Hotwords](http://profissionais.ws
 
 = 0.1 =
 * Publicação do Plugin
+
+= 0.2 =
+* Alguns Links Atualizados

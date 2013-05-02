@@ -1,10 +1,10 @@
 <?php
 /*
 Plugin Name: Hotwords
-Plugin URI: http://profissionais.ws/plugin-wordpress-hotwords
+Plugin URI: http://fazer-site.net/plugin-wordpress-hotwords
 Description: Este plugin insere os códigos do Htwords no teu blog Wordpress
 Author: Anderson Makiyama
-Version: 0.1
+Version: 0.2
 Author URI: http://ganhardinheiroblog.net
 */
 
@@ -16,9 +16,9 @@ class Anderson_Makiyama_Hotwords{
 	public static $PLUGIN_ID = self::PLUGIN_ID;
 	const PLUGIN_NAME = 'Hotwords';
 	public static $PLUGIN_NAME = self::PLUGIN_NAME;
-	const PLUGIN_PAGE = 'http://profissionais.ws/plugin-wordpress-hotwords';
+	const PLUGIN_PAGE = 'http://fazer-site.net/plugin-wordpress-hotwords';
 	public static $PLUGIN_PAGE = self::PLUGIN_PAGE;
-	const PLUGIN_VERSION = '0.1';
+	const PLUGIN_VERSION = '0.2';
 	public static $PLUGIN_VERSION = self::PLUGIN_VERSION;
 	public $plugin_basename;
 	public $plugin_path;

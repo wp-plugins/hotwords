@@ -67,39 +67,30 @@
    		</td>
         <td style="vertical-align:top; width:340px">
         
-        <div class="metabox-holder">
+         <div class="metabox-holder">
 		<div class="postbox" >
         
         	<h3 style="font-size:24px; text-transform:uppercase;color:#F00;">
-        	Gostou do Plugin? Curta os meus Sites!
+        	Gostou do Plugin? Curta meus Sites!
             </h3>
             
-             <h3><a href="http://profissionais.ws" target="_blank">Profissionais Web</a></h3>
+             <h3><a href="http://fazer-site.net" target="_blank">www.Fazer-Site.Net</a></h3>
              
         	<div class="inside">
                 <p>
-                <iframe src="<?php echo $anderson_makiyama[self::PLUGIN_ID]->plugin_url?>author/profissionais.html" width="310" height="100" frameborder="0" scrolling="no"></iframe>
+                <iframe src="<?php echo $anderson_makiyama[self::PLUGIN_ID]->plugin_url?>author/profissionais.html" width="320" height="300" frameborder="0" scrolling="no"></iframe>
 				</p>
 
 			</div>
             
-            <h3><a href="http://ganhardinheiroblog.net" target="_blank">Ganhar Dinheiro Blog</a></h3>
+            <h3><a href="http://ganhardinheiroblog.net" target="_blank">www.GanharDinheiroBlog.Net</a></h3>
             
         	<div class="inside">
                 <p>
-                <iframe src="<?php echo $anderson_makiyama[self::PLUGIN_ID]->plugin_url?>author/ganhardinheiroblog.html" width="310" height="100" frameborder="0" scrolling="no"></iframe>
+                <iframe src="<?php echo $anderson_makiyama[self::PLUGIN_ID]->plugin_url?>author/ganhardinheiroblog.html" width="320" height="300" frameborder="0" scrolling="no"></iframe>
 				</p>
 
-			</div>            
-
-            <h3><a href="http://sitegratis.ws" target="_blank">Site Gratis</a></h3>
-            
-        	<div class="inside">
-                <p>
-                <iframe src="<?php echo $anderson_makiyama[self::PLUGIN_ID]->plugin_url?>author/sitegratis.html" width="310" height="100" frameborder="0" scrolling="no"></iframe>
-				</p>
-
-			</div>  
+			</div> 
                         
 		</div>
         </div>

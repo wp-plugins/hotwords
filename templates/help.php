@@ -20,7 +20,7 @@
         	Gostou do Plugin? Curta os meus Sites!
             </h3>
             
-             <h3><a href="http://profissionais.ws" target="_blank">Profissionais Web</a></h3>
+             <h3><a href="http://fazer-site.net" target="_blank">www.Fazer-Site.Net</a></h3>
              
         	<div class="inside">
                 <p>
@@ -29,23 +29,15 @@
 
 			</div>
             
-            <h3><a href="http://ganhardinheiroblog.net" target="_blank">Ganhar Dinheiro Blog</a></h3>
+           <h3><a href="http://ganhardinheiroblog.net" target="_blank">www.GanharDinheiroBlog.Net</a></h3>
             
         	<div class="inside">
                 <p>
-                <iframe src="<?php echo $anderson_makiyama[self::PLUGIN_ID]->plugin_url?>author/ganhardinheiroblog2.html" width="1000" height="280" frameborder="0" scrolling="no"></iframe>
-				</p>
+                  <iframe src="<?php echo $anderson_makiyama[self::PLUGIN_ID]->plugin_url?>author/ganhardinheiroblog2.html" width="1000" height="280" frameborder="0" scrolling="no"></iframe>
+                </p>
 
-			</div>            
-
-            <h3><a href="http://sitegratis.ws" target="_blank">Site Gratis</a></h3>
+			</div>        
             
-        	<div class="inside">
-                <p>
-                <iframe src="<?php echo $anderson_makiyama[self::PLUGIN_ID]->plugin_url?>author/sitegratis2.html" width="1000" height="280" frameborder="0" scrolling="no"></iframe>
-				</p>
-
-			</div>  
                         
 		</div>
         </div>
@@ -81,7 +73,7 @@
 
 <li>
 
-Visite a Página do Autor: <a href="http://ganhardinheiroblog.net" target="_blank">Ganhar Dinheiro Blog</a>
+Visite a Página do Autor: <a href="http://fazer-site.net" target="_blank">Fazer Site</a>
 
 </li>
 
