@@ -6,7 +6,7 @@ Requires at least: 3.0
 Tested up to: 3.3
 Stable tag: trunk
 
-Este plugin insere os códigos do Htwords no teu blog Wordpress
+Este plugin insere os códigos do Hotwords no teu blog Wordpress
 
 == Description ==
 
