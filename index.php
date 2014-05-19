@@ -2,9 +2,9 @@
 /*
 Plugin Name: Hotwords
 Plugin URI: http://fazer-site.net/plugin-wordpress-hotwords
-Description: Este plugin insere os códigos do Htwords no teu blog Wordpress
+Description: Este plugin insere os códigos do Htwords no seu blog Wordpress
 Author: Anderson Makiyama
-Version: 0.2
+Version: 1.0
 Author URI: http://ganhardinheiroblog.net
 */
 
@@ -18,7 +18,7 @@ class Anderson_Makiyama_Hotwords{
 	public static $PLUGIN_NAME = self::PLUGIN_NAME;
 	const PLUGIN_PAGE = 'http://fazer-site.net/plugin-wordpress-hotwords';
 	public static $PLUGIN_PAGE = self::PLUGIN_PAGE;
-	const PLUGIN_VERSION = '0.2';
+	const PLUGIN_VERSION = '1.0';
 	public static $PLUGIN_VERSION = self::PLUGIN_VERSION;
 	public $plugin_basename;
 	public $plugin_path;
@@ -37,6 +37,7 @@ class Anderson_Makiyama_Hotwords{
 		if(!isset($options['id'])) $options['id'] = "";
 		if(!isset($options['cor'])) $options['cor'] = '0099ff';
 		if(!isset($options['lugares'])) $options['lugares'] = array("single");
+		if(!isset($options['pais'])) $options['pais'] = 'com.br';
 
 		update_option(self::CLASS_NAME . "_options", $options);
 		
@@ -45,10 +46,13 @@ class Anderson_Makiyama_Hotwords{
 	public function Anderson_Makiyama_Hotwords(){ //__construct()
 
 		$this->plugin_basename = plugin_basename(__FILE__);
+
 		$this->plugin_path = dirname(__FILE__) . "/";
+
 		$this->plugin_url = WP_PLUGIN_URL . "/" . basename(dirname(__FILE__)) . "/";
 		
-		//load_plugin_textdomain( self::CLASS_NAME, '', strtolower(str_replace(" ","-",self::PLUGIN_NAME)) . '/lang' );	
+		
+		load_plugin_textdomain( self::CLASS_NAME, '', strtolower(str_replace(" ","-",self::PLUGIN_NAME)) . '/lang' );	
 
 	}
 	
@@ -96,7 +100,7 @@ class Anderson_Makiyama_Hotwords{
 		
 		$options = get_option(self::CLASS_NAME . "_options");
 		
-		$script = '<script src="http://ads'. $options["id"] .'.hotwords.com.br/show.jsp?id='. $options["id"] .'&cor='. $options["cor"] .'"></script>';
+		$script = '<script src="http://ads'. $options["id"] .'.hotwords.'. $options["pais"] .'/show.jsp?id='. $options["id"] .'&cor='. $options["cor"] .'"></script>';
 		
 		echo $script;
 	}
@@ -105,7 +109,7 @@ class Anderson_Makiyama_Hotwords{
 	public function settings_link($links) { 
 		global $anderson_makiyama;
 	  
-		$settings_link = '<a href="options-general.php?page='. self::CLASS_NAME .'">'. 'Configurações'. '</a>'; 
+		$settings_link = '<a href="options-general.php?page='. self::CLASS_NAME .'">'. __('Configurações',self::CLASS_NAME). '</a>'; 
 		array_unshift($links, $settings_link); 
 		return $links; 
 	}	
@@ -130,8 +134,11 @@ class Anderson_Makiyama_Hotwords{
 
   		 add_menu_page(self::PLUGIN_NAME, self::PLUGIN_NAME,1, self::CLASS_NAME,array(self::CLASS_NAME,'options_page'), plugins_url('/images/icon.png', __FILE__));
 		 
-		 add_submenu_page(self::CLASS_NAME, self::PLUGIN_NAME,'Página de Suporte',1, self::CLASS_NAME . "_Help", array(self::CLASS_NAME,'help_page'));
+		 add_submenu_page(self::CLASS_NAME, self::PLUGIN_NAME,__('Ajuda',self::CLASS_NAME),1, self::CLASS_NAME . "_Help", array(self::CLASS_NAME,'help_page'));
 
+		 global $submenu;
+		 if ( isset( $submenu[self::CLASS_NAME] ) )
+			$submenu[self::CLASS_NAME][0][0] = __('Configurações',self::CLASS_NAME);
 	}	
 
 	
@@ -154,18 +161,25 @@ class Anderson_Makiyama_Hotwords{
 
 		if ($_POST['submit']) {
 
+			if(!wp_verify_nonce( $_POST[self::CLASS_NAME], 'update' ) ){
+				
+				print 'Sorry, your nonce did not verify.';
+  				exit;
+   
+			}
+			
 			$options['id'] = $_POST['id'];
 			$options['cor'] = str_replace("#","",$_POST['cor']);
 			$options['lugares'] = $_POST['lugares'];
+			$options['pais'] = $_POST['pais'];
 
 			update_option(self::CLASS_NAME . "_options", $options);
 			
 			echo '<div id="message" class="updated">';
-			echo '<p><strong>'. 'Configurações salvas com sucesso!' . '</strong></p>';
+			echo '<p><strong>'. __('Configurações salvas com sucesso!',self::CLASS_NAME) . '</strong></p>';
 			echo '</div>';			
 
 		}
-
 
 		include("templates/options.php");
 
@@ -179,36 +193,43 @@ class Anderson_Makiyama_Hotwords{
 		include("templates/help.php");
 
 	}	
+
+	public function my_js($hook) {
+		
+		global $anderson_makiyama;
+		
+		if(strpos($hook,self::CLASS_NAME) === false ) return;
+		
+		wp_register_script( self::CLASS_NAME . "_js_admin", $anderson_makiyama[self::PLUGIN_ID]->plugin_url . 'jscolor/jscolor.js' );
+	 
+		wp_enqueue_script( self::CLASS_NAME . "_js_admin", $anderson_makiyama[self::PLUGIN_ID]->plugin_url . 'jscolor/jscolor.js' );
+	 
+	}
+
+	public function alerta() {
 	
+		$options = get_option(self::CLASS_NAME . "_options");
+	
+		if (  !isset($_POST['id']) || empty($_POST['id'])  ) {
+		
+		
+			if ( empty($options['id'])) {
+				
+				$alerta = '* '.__('Você ainda não informou o ID do site na página de Configurações do plugin Hotwords!',self::CLASS_NAME).'<br /><a href="admin.php?page=Anderson_Makiyama_Hotwords">'.__('Informe Aqui',self::CLASS_NAME).'</a><br />'; 
+			
+				echo "<div class='updated fade-ff0000'><p><strong>".__('Hotwords: Atenção!', self::CLASS_NAME)."</strong><br /> ".$alerta."</p></div>";
+			}
+			
 
-	public static function make_data($data, $anoConta,$mesConta,$diaConta){
-
-	   $ano = substr($data,0,4);
-	   $mes = substr($data,5,2);
-	   $dia = substr($data,8,2);
-
-	   return date('Y-m-d',mktime (0, 0, 0, $mes+($mesConta), $dia+($diaConta), $ano+($anoConta)));	
-
+			
+		}
+			
+		return;
 	}
 	
+	//General Functions
 	
-
-	public static function get_data_array($data,$part=''){
-
-	   $data_ = array();
-	   $data_["ano"] = substr($data,0,4);
-	   $data_["mes"] = substr($data,5,2);
-	   $data_["dia"] = substr($data,8,2);
-	   
-	   if(empty($part))return $data_;
-
-	   return $data_[$part];
-
-	}	
-	
-	
-
-	public static function is_checked_checkbox($vl, $fields){
+	public static function checked($vl, $fields){
 
 		if(in_array($vl, $fields)){
 		
@@ -220,24 +241,6 @@ class Anderson_Makiyama_Hotwords{
 		
 	}	
 	
-	
-	public static function is_checked_radio($vl1,$vl2){
-
-		if($vl1==$vl2) return " checked=checked ";
-
-		return "";
-		
-	}		
-
-	public static function is_selected($vl1, $vl2){
-
-		if($vl1==$vl2) return " selected=selected ";
-
-		return "";
-
-	}	
-	
-
 }
 
 if(!isset($anderson_makiyama)) $anderson_makiyama = array();
@@ -256,5 +259,8 @@ add_filter("the_content", array($anderson_makiyama[$anderson_makiyama_indice]->g
 
 add_action("wp_footer", array($anderson_makiyama[$anderson_makiyama_indice]->get_static_var('CLASS_NAME'), 'footer_js'));
 
+add_action( 'admin_enqueue_scripts', array($anderson_makiyama[$anderson_makiyama_indice]->get_static_var('CLASS_NAME'), 'my_js') );
+
+add_action('admin_notices', array($anderson_makiyama[$anderson_makiyama_indice]->get_static_var('CLASS_NAME'), 'alerta'));
 
 ?>

@@ -1,0 +1,143 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Hotwords inglês\n"
+"POT-Creation-Date: 2014-05-19 19:04-0300\n"
+"PO-Revision-Date: 2014-05-19 19:07-0300\n"
+"Last-Translator: Anderson <andersonmaki@gmail.com>\n"
+"Language-Team: Anderson.Makiyama <andersonmaki@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.5\n"
+"X-Poedit-Basepath: C:\\wamp\\www\\wp-content\\plugins\\hotwords\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: index.php:112 index.php:141 templates/options.php:4
+msgid "Configurações"
+msgstr "Settings"
+
+#: index.php:137 templates/help.php:7
+msgid "Ajuda"
+msgstr "Help"
+
+#: index.php:179
+msgid "Configurações salvas com sucesso!"
+msgstr "Settings updated successfully!"
+
+#: index.php:218
+msgid ""
+"Você ainda não informou o ID do site na página de Configurações do plugin "
+"Hotwords!"
+msgstr ""
+"You not entered the site ID on the Hotwords plugin settings page still!"
+
+#: index.php:218
+msgid "Informe Aqui"
+msgstr "Inform it Here"
+
+#: index.php:220
+msgid "Hotwords: Atenção!"
+msgstr "Hotwords: Attention!"
+
+#: templates/help.php:11
+msgid "Para mais detalhes visite a página do plugin"
+msgstr "For more details visit plugin page"
+
+#: templates/help.php:25 templates/options.php:158
+msgid "Autor:"
+msgstr "Author:"
+
+#: templates/help.php:29 templates/options.php:162
+msgid "Email do Autor:"
+msgstr "Author Email:"
+
+#: templates/help.php:33 templates/options.php:166
+msgid "Visite a Página do Plugin:"
+msgstr "Visit Plugin Page:"
+
+#: templates/help.php:39 templates/options.php:172
+msgid "Visite a Página do Autor:"
+msgstr "Visit Author Page:"
+
+#: templates/options.php:16
+msgid "Configurações Gerais"
+msgstr "General Settings"
+
+#: templates/options.php:20
+msgid "ID do Site"
+msgstr "Site ID"
+
+#: templates/options.php:22
+msgid "Cada site aprovado no Hotwords possui um ID"
+msgstr "Each site aproved on Hotwords has an ID"
+
+#: templates/options.php:26
+msgid "Selecione o País"
+msgstr "Select the Country"
+
+#: templates/options.php:27
+msgid "Brasil"
+msgstr "Brazil"
+
+#: templates/options.php:28
+msgid "México"
+msgstr "Mexico"
+
+#: templates/options.php:29
+msgid "Argentina"
+msgstr "Argentina"
+
+#: templates/options.php:30
+msgid "Portugal"
+msgstr "Portugal"
+
+#: templates/options.php:31
+msgid "Espanha"
+msgstr "Spain"
+
+#: templates/options.php:37 templates/options.php:67
+msgid "Salvar Alterações"
+msgstr "Save Changes"
+
+#: templates/options.php:48
+msgid "Configurações de Visual"
+msgstr "Visual Settings"
+
+#: templates/options.php:52
+msgid "Cor dos Links"
+msgstr "Links color"
+
+#: templates/options.php:53
+msgid "Escolha a cor dos Links"
+msgstr "Choose the links color"
+
+#: templates/options.php:58
+msgid "Onde exibir:"
+msgstr "Where display:"
+
+#: templates/options.php:59
+msgid "Qualquer Lugar"
+msgstr "Anywhere"
+
+#: templates/options.php:62
+msgid "Páginas"
+msgstr "Pages"
+
+#: templates/options.php:90
+msgid "Dê uma Olhada!"
+msgstr "Take a Look!"
+
+#: templates/options.php:96
+msgid "Melhores Temas Wordpress"
+msgstr "Best Wordpress Themes"
+
+#: templates/options.php:120
+msgid "Melhor Autoresponder para Email Marketing"
+msgstr "Best Autoresponder for Email Marketing"
+
+#~ msgid "Congiruações"
+#~ msgstr "Settings"

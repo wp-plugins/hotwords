@@ -1,35 +1,44 @@
 === Hotwords ===
 Contributors: Anderson.Makiyama
 Donate link: http://ganhardinheiroblog.net
-Tags: hotwords, plugin hotwords, plugin afiliados, afiliados hotwords
+Tags: hotwords, plugin hotwords, plugin afiliados, afiliados, ganhar dinheiro, dinheiro
 Requires at least: 3.0
-Tested up to: 3.3
+Tested up to: 3.9.1
 Stable tag: trunk
 
-Este plugin insere os códigos do Hotwords no teu blog Wordpress
+Este plugin insere os códigos do Hotwords no teu blog Wordpress. 
+Add hotwords to your blog.
 
 == Description ==
 
-Com este plugin você pode inserir os códigos do Hotwords facilmente em seu site Wordpress. Basta ativar o plugin, acessar a página de opções, informar o ID do site, a cor dos links e em quais lugares do site você quer se sejam exibidos os links do Hotwords. 
- 
+**Apresentação**
+
+Com este plugin você pode inserir os códigos do Hotwords facilmente em seu site Wordpress. Basta ativar o plugin, acessar a página de opções, informar o ID do site, a cor dos links e em quais lugares do site você quer se sejam exibidos os links do Hotwords. Suporte para escolher o país, opções: Brasil, Argentina, México, Espanha, Portugal
+
+https://www.youtube.com/watch?v=_PH9orRuxIY
+
+**Sobre**
+
+O plugin Hotwords foi criado por Anderson Makiyama do [Ganhar Dinheiro na Internet](http://ganhardinheiroblog.net)
+
 == Installation ==
 
 Para instalar o plugin, siga os passos abaixo:
 
-1- Envie o plugin para o diretório de plugins do teu blog, geralmente fica em: /wp-content/plugins/
-2- Acesse o painel do teu blog, vá até a seção Plugins e ative o Plugin Hotwords
-3- Agora, irá aparecer um novo ítem lá no final do menu lateral, chamado Hotwords, clique sobre ele para editar as opções do plugin
+1- Envie o plugin para o diretório de plugins do seu blog, geralmente fica em: /wp-content/plugins/
+2- Acesse o painel do seu blog, vá até a seção Plugins e ative o Plugin Hotwords
+3- Agora, aparecerá um novo ítem lá no final do menu lateral, chamado Hotwords, clique sobre ele para editar as opções do plugin
 4- Faça as configurações que achar necessárias e salve as alterações. 
 
-Na página de opções você deve informar o ID de afiliado do site. Note que cada site aprovado no Hotwords possui seu respectivo ID. Ainda na página de opções, também é possível configurar a cor dos links, neste caso você precisa informar o código hexadecimal (6 caracteres). Para facilitar, na página de opções é exibida uma tabela com várias cores e seus respectivos códigos.
+Na página de opções você deve informar o ID de afiliado do site. Note que cada site aprovado no Hotwords possui seu respectivo ID. Ainda na página de opções, também é possível configurar a cor dos links.
 
 Quanto à opção "Onde exibir", existem quatro entradas:
 1- Qualquer lugar: Fará os links do hotwords serem exibidos em qualquer lugar do site Wordpress
-2- Na home do site: Fará os links do hotwords serem exibidos na Home do site
-3- Nos Posts: Fará os links do hotwords serem exibidos nos posts do site
-4- Nas páginas: Fará os links serem exibidos nas páginas. 
+2- Home: Fará os links do hotwords serem exibidos na Home do site
+3- Posts: Fará os links do hotwords serem exibidos nos posts do site
+4- Páginas: Fará os links serem exibidos nas páginas. 
 
-Note que, caso você marque a opção "Qualquer lugar", as demais opções serão desconsideradas. Para que os links sejam exibidos em lugares específicos, como apenas nos posts, deixe apenas a opção "Nos Posts" marcada. 
+Note que, caso você marque a opção "Qualquer lugar", as demais opções serão desconsideradas. Para que os links sejam exibidos em lugares específicos, como apenas nos posts, deixe apenas a opção "Posts" marcada. 
 
 == License ==
 
@@ -43,7 +52,7 @@ You should have received a copy of the GNU General Public License along with Pub
 == Frequently Asked Questions ==
 
 = Posso sugerir idéias ou modificações para este plugin? =
-Claro que pode, deixe seu comentário no link [Hotwords](http://fazer-site.net/plugin-wordpress-hotwords/#comments)
+Claro que pode, deixe seu comentário no link [Plugin Hotwords](http://fazer-site.net/plugin-wordpress-hotwords/)
 
 == Screenshots ==
 1. Página de opções do Plugin
@@ -55,3 +64,7 @@ Claro que pode, deixe seu comentário no link [Hotwords](http://fazer-site.net/p
 
 = 0.2 =
 * Alguns Links Atualizados
+
+= 1.0 = 
+* Adicionado opções de outros países além do Brasil, como México, Espanha, Portugual, Argentina.
+* Adicionado seletor de cor visual
