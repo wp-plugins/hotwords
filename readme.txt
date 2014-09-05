@@ -1,9 +1,9 @@
-=== Hotwords ===
+﻿=== Hotwords ===
 Contributors: Anderson.Makiyama
 Donate link: http://ganhardinheiroblog.net
 Tags: hotwords, plugin hotwords, plugin afiliados, afiliados, ganhar dinheiro, dinheiro
 Requires at least: 3.0
-Tested up to: 3.9.1
+Tested up to: 4.0
 Stable tag: trunk
 
 Este plugin insere os códigos do Hotwords no teu blog Wordpress. 
