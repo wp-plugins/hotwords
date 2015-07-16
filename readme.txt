@@ -3,7 +3,7 @@ Contributors: Anderson.Makiyama
 Donate link: http://ganhardinheiroblog.net
 Tags: hotwords, plugin hotwords, plugin afiliados, afiliados, ganhar dinheiro, dinheiro
 Requires at least: 3.0
-Tested up to: 4.0
+Tested up to: 4.2.2
 Stable tag: trunk
 
 Este plugin insere os códigos do Hotwords no teu blog Wordpress. 
@@ -68,3 +68,6 @@ Claro que pode, deixe seu comentário no link [Plugin Hotwords](http://fazer-sit
 = 1.0 = 
 * Adicionado opções de outros países além do Brasil, como México, Espanha, Portugual, Argentina.
 * Adicionado seletor de cor visual
+
+= 1.1 = 
+* Mudei uma parte do código e icones
